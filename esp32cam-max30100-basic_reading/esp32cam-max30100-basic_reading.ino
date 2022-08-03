@@ -7,11 +7,11 @@
   Outputs all Red/IR/Green values.
 
   Hardware Connections (Breakoutboard to ES32CAM):
-  -5V = 5V (3.3V is allowed)
-  -GND = GND
-  -SDA = 14 (or SDA)
-  -SCL = 15 (or SCL)
-  -INT = Not connected
+  - 5V = 5V (3.3V is allowed)
+  - GND = GND
+  - SDA = 14 (or SDA)
+  - SCL = 15 (or SCL)
+  - INT = Not connected
 
   The MAX30105 Breakout can handle 5V or 3.3V I2C logic. We recommend powering the board with 5V
   but it will also run at 3.3V.
@@ -29,10 +29,10 @@ MAX30105 particleSensor;
 
 void setup()
 {
-  debug.begin(9600);
+  debug.begin(115200);
   debug.println("MAX30105 Basic Readings Example");
 
-  Wire.begin(15,14);
+  Wire.begin(14,15);
   // Initialize sensor
   if (particleSensor.begin(Wire) == false)
   {
